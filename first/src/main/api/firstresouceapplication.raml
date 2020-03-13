@@ -1,0 +1,16 @@
+#%RAML 1.0
+title: firstresouceapplication
+baseUri: https://mocksvc.mulesoft.com/mocks/d0200c5f-3173-4800-8de7-cececfc98583/path # baseUri: localhost:8081/path
+/getFlightdetails:
+ get:
+    queryParameters: 
+      destination:
+       type: string
+       maxLength: 3
+       minLength: 3
+       required: true
+    responses: 
+      200:
+        body: 
+          application/json:
+            example: !include NEWFOLDER/services.json
